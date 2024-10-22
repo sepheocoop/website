@@ -1,39 +1,45 @@
 <!doctype html>
 <html>
-    <head>
+
+<head>
 	<title>sepheo.co/op</title>
-	<meta http-equiv="refresh" content="0; url=http://sepheo.co/" />	
+	<meta http-equiv="refresh" content="0; url=http://sepheo.co/" />
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
 	<style>
-	 html, body, .container {
-	     height: 100%;
-	 }
-	 
-	 .container {
-	     display: flex;
-	     flex-direction: column;
-	     align-items: center;
-	     justify-content: flex-start;
-	     font-family: sans;
-	 }
-	 .about {
-	     max-width: 50em;
-	     display: flex;
-	     flex-direction: column;
-	     font-family: sans;
-	     text-align: justify;
-	 }
-	 .mono {
-	     font-family: mono;
-	 }
-	 .at::before {
-	     content: '@';
-	 }
-	</style>
-    </head>
+		html,
+		body,
+		.container {
+			height: 100%;
+		}
 
-    <body class="container">
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			font-family: sans;
+		}
+
+		.about {
+			max-width: 50em;
+			display: flex;
+			flex-direction: column;
+			font-family: sans;
+			text-align: justify;
+		}
+
+		.mono {
+			font-family: mono;
+		}
+
+		.at::before {
+			content: '@';
+		}
+	</style>
+</head>
+
+<body class="container">
 	<!-- NOTE this is (or should be) copy of the top-level index.html content,
 	     but with adjusted relative links, which reduces the redirect blip
 	     (see the redirection header above).
@@ -41,16 +47,30 @@
 	     We should fix this later.
 	-->
 	<h1>sepheo co-op</h1>
-	<div class="about">
-	    <p>Sepheo is the working title for a project which aims to become a mutual society for self-employed professionals. We aspire to the <a href="https://en.wikipedia.org/wiki/Rochdale_Principles" target="_blank">Rochdale Co-operative</a> principles, and the <a href="https://solidarityeconomyprinciples.org/" target="_blank">Solidarity Economy</a> principles.</p>
-	    <p>The problem: whilst employment in a typical company can be alienating (for reasons well understood to the co-op movement), co-ops are not a widely accessible alternative for most people. Their relative rarity, low visibility and unfamiliarity mean they're often not perceived as existing, yet alone as a possible alternative - even then they may be dismissed.  In the other direction, co-ops often require a much higher degree of trust to grant membership than they would employment.</p>
-	    <p>Freelancing is another way to attain more autonomy, and is becoming more common in the contemporary "gig economy", but can be precarious and isolating. It requires various legal, business, and social expertises outside the core skills of a professional - not to mention the confidence to attain these.</p>
-	    <p>The hope is that we can help to bridge that gap, making co-operatives more visible, and easier to access through the intermediate step of freelancing within co-operative contexts. Likewise, to make freelancers more visible and easier to access for co-operatives.</p>
-	    <p>In the long term we want to act as a generative force in the coop economy, multiplying the efforts of others beyond what they thought possible.</p>
+	<div id="about">
+		<div id="markdown-content"></div>
+		<div id="links">
+			<p>You can register your interest as a freelancer <a href="../register" target="_blank">here</a>.</p>
+			<p>OpenCollective: <span class="mono"><a href="https://opencollective.com/sepheocoop#category-ABOUT"
+						target="_blank">opencollective.com/sepheocoop</a></span></p>
+			<p>GitHub: <span class="mono"><a href="https://github.com/sepheocoop"
+						target="_blank">github.com/sepheocoop</a></span></p>
+			<p><span>E-mail:</span> <span class="mono">contact</span><span class="mono at">sepheo.co</span></p>
+		</div>
 	</div>
-	<p>You can register your interest as a freelancer <a href="../register" target="_blank">here</a>.</p>
-	<p>OpenCollective: <span class="mono"><a href="https://opencollective.com/sepheocoop#category-ABOUT" target="_blank">opencollective.com/sepheocoop</a></span></p>
-	<p>GitHub: <span class="mono"><a href="https://github.com/sepheocoop" target="_blank">github.com/sepheocoop</a></span></p>
-	<p><span>E-mail:</span> <span class="mono">contact</span><span class="mono at">sepheo.co</span></p>
-    </body>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+<script>
+	const converter = new showdown.Converter();
+
+	fetch("../about.md")
+		.then((res) => res.text())
+		.then((res) => {
+			const introContent = converter.makeHtml(res);
+			const container = document.getElementById("markdown-content");
+			container.innerHTML = introContent;
+		});
+</script>
+
 </html>
