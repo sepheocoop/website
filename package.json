@@ -12,5 +12,9 @@
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=23.6.0",
+    "npm": ">=10.9.2"
   }
 }
