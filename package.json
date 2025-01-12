@@ -1,7 +1,7 @@
 {
-  "name": "website-2",
+  "name": "Sepheo.co website",
   "version": "1.0.0",
-  "description": "Second iteration of the Sepheo website.",
+  "description": "The Sepheo.co website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
