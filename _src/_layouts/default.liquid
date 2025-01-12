@@ -1,0 +1,76 @@
+---
+title: SEPHEO coop
+---
+<!doctype html>
+<html>
+
+  <head>
+    <title>{{ title }}</title>
+    <link rel="icon" sizes="192x192" href="https://static.parastorage.com/client/pfavico.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Syne+Mono&display=swap"
+          rel="stylesheet">
+    <style>
+      html,
+      body,
+      .container {
+          font-size: 2vh;
+          height: 100%;
+      }
+
+      h1 {
+          font-size: 3rem;
+      }
+
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          font-family: sans;
+      }
+
+      #about {
+          margin: 0rem 2rem;
+          max-width: 50em;
+          display: flex;
+          flex-direction: column;
+          font-family: sans;
+          text-align: justify;
+      }
+
+      .mono {
+          font-family: "Syne Mono", monospace;
+          font-weight: 400;
+          font-style: normal;
+      }
+
+      p {
+          font-family: "SUSE", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 300;
+          font-style: normal;
+          margin: 0.5rem 0rem;
+      }
+
+      .at::before {
+          content: '@';
+      }
+
+      #links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    {{ content | raw }}
+  </body>
+</html>
