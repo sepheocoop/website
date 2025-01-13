@@ -30,7 +30,7 @@ In the long term we want to act as a generative force in the coop economy, multi
 
   <div id="links">
     
-    Join our list of freelancers <a href="register" target="_blank">here</a>.
+    Join our list of freelancers <a href="/register" target="_blank">here</a>.
     
     OpenCollective: <span class="mono"><a href="https://opencollective.com/sepheocoop#category-ABOUT"
       target="_blank">opencollective.com/sepheocoop</a></span>
