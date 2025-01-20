@@ -1,0 +1,23 @@
+{
+  "name": "Sepheo.co website",
+  "version": "1.0.0",
+  "description": "The Sepheo.co website.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "server": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=23.6.0",
+    "npm": ">=10.9.2"
+  }
+}
