@@ -11,8 +11,7 @@ pagenames:
     - co/index
 permalink: "{{ url }}.html"
 ---
-<h1 class="mono">sepheo coop</h1>
-<div id="about">
+# sepheo coop
 
 SEPHEO (Self-Employed People Helping Each Other) Coop is a mutual society for self-employed professionals. We make it easy for freelancers to connect with coops and other aligned organisations.
 
@@ -28,16 +27,16 @@ Sepheo connects co-operatives and freelancers by regularly checking-in with coop
 
 In the long term we want to act as a generative force in the coop economy, multiplying the efforts of others beyond what they thought possible.
 
-  <div id="links">
-    
-    Join our list of freelancers <a href="/register" target="_blank">here</a>.
-    
-    OpenCollective: <span class="mono"><a href="https://opencollective.com/sepheocoop#category-ABOUT"
-      target="_blank">opencollective.com/sepheocoop</a></span>
-    
-    GitHub: <span class="mono"><a href="https://github.com/sepheocoop"
-      target="_blank">github.com/sepheocoop</a></span>
-      
-    <span>E-mail:</span> <span class="mono">contact</span><span class="mono at">sepheo.co</span>
-  </div>
+<div id="links">
+
+Join our list of freelancers <a href="/register" target="_blank">here</a>.
+
+OpenCollective: <a href="https://opencollective.com/sepheocoop#category-ABOUT"
+  target="_blank">opencollective.com/sepheocoop</a>
+
+GitHub: <a href="https://github.com/sepheocoop"
+  target="_blank">github.com/sepheocoop</a>
+
+E-mail: <a>contact<span class="mono at">sepheo.co</a>
+
 </div>
