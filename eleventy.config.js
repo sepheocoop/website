@@ -1,5 +1,10 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import less from "less";
+import { existsSync, rmSync } from "node:fs";
+
+// Clean the _site directory before building
+if (existsSync("_site")) await rmSync("_site", { recursive: true });
+console.info("Deleting _site folder");
 
 export default function (config) {
   config.addTemplateFormats("less");
