@@ -1,20 +1,45 @@
---- # Adapted from https://www.11ty.dev/docs/deployment/#mini-tutorials
+---
+# Adapted from https://www.11ty.dev/docs/deployment/#mini-tutorials
+# Amended to incorporate site previews as per https://daiyi.co/blog/pr-previews-for-github-pages/
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
+      # Deploy the main branch on commit
       - main
+
+  # This will publish a site preview on every pull request, and also
+  # run the build command to test if the site is broken.
   pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
     runs-on: ubuntu-24.04
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      # If you're using the default github pages url, use this instead:
+      # DOMAIN: ${{ github.actor }}.github.io
+      DOMAIN: sepheo.co
+      PR_PATH_PREFIX: _preview/pr-${{github.event.number}}/
     steps:
+      # PR builds only (more exactly: non-main branches)
+      - name: Comment on PR
+        uses: hasura/comment-progress@v2.3.0
+        if: github.ref != 'refs/heads/main'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "Starting deployment of preview ⏳..."
+
       - uses: actions/checkout@v3
 
       - name: Setup Node
@@ -37,9 +62,37 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: Deploy
+      - name: Deploy if this is the `main` branch
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+
+      # The remainder of these steps are for PRs only
+      - name: Build PR preview website
+        if: github.ref != 'refs/heads/main'
+        run: npm run build -- "--pathprefix=/${{ env.PR_PATH_PREFIX }}"
+
+      - name: Deploy to PR preview
+        if: github.ref != 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          destination_dir: ${{ env.PR_PATH_PREFIX }}
+
+      - name: Update PR comment
+        if: github.ref != 'refs/heads/main'
+        uses: hasura/comment-progress@v2.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: |
+            A preview of ${{ github.event.after }} is uploaded and can be seen here:
+
+            ✨ https://${{ env.DOMAIN }}/${{ env.PR_PATH_PREFIX}} ✨
+
+            Changes may take a few minutes to propagate. Since this is a preview of production, content with `draft: true` will not be rendered. The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH_PREFIX }}
