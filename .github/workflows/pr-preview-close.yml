@@ -1,0 +1,33 @@
+---
+# Adapted from https://daiyi.co/blog/pr-previews-for-github-pages/
+
+name: delete preview on PR close
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete_preview:
+    runs-on: ubuntu-24.04
+    env:
+      PR_PATH_PREFIX: /pull/${{github.event.number}}/
+    steps:
+      - name: make empty dir
+        run: mkdir public
+
+      - name: delete folder
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: ${{ env.PR_PATH_PREFIX }}
+
+      - name: Comment on PR
+        uses: hasura/comment-progress@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: |
+            🪓 PR closed, deleted preview at https://github.com/${{ github.repository }}/tree/gh-pages${{ env.PR_PATH_PREFIX }}
