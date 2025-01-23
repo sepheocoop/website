@@ -12,7 +12,7 @@ charset = utf-8
 indent_style = space
 
 # 2 space indentation
-[{*.{js,ts,json,css,scss,html,jsx,tsx,yml,yaml,liquid,njk,webc,hbs,mustache,ejs,haml,pug},.babelrc}]
+[{*.{js,ts,json,css,scss,less,html,jsx,tsx,yml,yaml,liquid,njk,webc,hbs,mustache,ejs,haml,pug},.babelrc}]
 indent_size = 2
 
 # 4 space indentation

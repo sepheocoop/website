@@ -1,0 +1,80 @@
+// Import the Google Mono font
+@import (css) url(https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Syne+Mono&display=swap);
+
+.mono-font {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sans-font {
+  font-family: sans;
+}
+
+.suse-font {
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html,
+body,
+.container {
+  font-size: 2vh;
+  height: 100%;
+  .sans-font;
+}
+
+h1,h2,h3,h4 {
+  .mono-font
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  margin: 0rem auto;
+  padding: 0 2rem;
+  max-width: 50em;
+  text-align: justify;
+
+  h1,h2,h3,h4 {
+    text-align: center;
+  }
+}
+
+p {
+  .suse-font;
+  margin: 0.5rem 0rem;
+}
+
+// Render somewhat spam-resistant email links like this: `jbloggs<span class="at">example.com</span>`
+.at::before {
+  content: '@';
+}
+
+// Styling for the #links box
+#links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  a {
+    .mono-font;
+  }
+}
+
+
+// For the registration form
+iframe.nocodb {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
