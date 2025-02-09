@@ -1,21 +1,9 @@
----
-layout: default.liquid
-pagination:
-# Dupe this page on 'co/index.html'
-# see https://github.com/11ty/eleventy/issues/326#issuecomment-444127344
-    data: pagenames
-    alias: url
-    size: 1
-pagenames:
-    - index
-    - co/index
-permalink: "{{ url }}.html"
----
-# sepheo coop
+// (See note about frontmatters in op.adoc)
+= sepheo coop
 
 SEPHEO (Self-Employed People Helping Each Other) Coop is a mutual society for self-employed professionals. We make it easy for freelancers to connect with coops and other aligned organisations.
 
-As a coop, we subscribe to the [Rochdale Co-operative principles](https://en.wikipedia.org/wiki/Rochdale_Principles), and the [Solidarity Economy principles](https://solidarityeconomyprinciples.org/).
+As a coop, we subscribe to the https://en.wikipedia.org/wiki/Rochdale_Principles[Rochdale Co-operative principles], and the https://solidarityeconomyprinciples.org/[Solidarity Economy principles].
 
 The problem: whilst employment in a typical company can be alienating (for reasons well understood to the co-op movement), co-ops are not a widely accessible alternative for most people. Their relative rarity, low visibility and unfamiliarity mean they're often not perceived as existing, yet alone as a possible alternative - even then they may be dismissed. In the other direction, co-ops often require a much higher degree of trust to grant membership than they would employment.
 
@@ -27,16 +15,15 @@ Sepheo connects co-operatives and freelancers by regularly checking-in with coop
 
 In the long term we want to act as a generative force in the coop economy, multiplying the efforts of others beyond what they thought possible.
 
-<div id="links">
+[#links]
+--
 
-Join our list of freelancers <a href="/register" target="_blank">here</a>.
+Join our list of freelancers link:/register[here^].
 
-OpenCollective: <a href="https://opencollective.com/sepheocoop#category-ABOUT"
-  target="_blank">opencollective.com/sepheocoop</a>
+OpenCollective: https://opencollective.com/sepheocoop#category-ABOUT[opencollective.com/sepheocoop^]
 
-GitHub: <a href="https://github.com/sepheocoop"
-  target="_blank">github.com/sepheocoop</a>
+GitHub: https://github.com/sepheocoop[github.com/sepheocoop^]
 
-E-mail: <a>contact<span class="mono at">sepheo.co</a>
+E-mail: mailto:contact@sepheo.co[]
 
-</div>
+--
