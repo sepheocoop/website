@@ -1,7 +1,7 @@
 // (See note about frontmatters in op.adoc)
 = sepheo coop
 
-SEPHEO (Self-Employed People Helping Each Other) Coop is a mutual society for self-employed professionals. We make it easy for freelancers to connect with coops and other aligned organisations.
+SEPHEO (Self-Employed People Helping Each Other) Coop is a mutual society for self-employed professionals. We make it easy for freelancers to connect with coops and other aligned organisations.{data}
 
 As a coop, we subscribe to the https://en.wikipedia.org/wiki/Rochdale_Principles[Rochdale Co-operative principles], and the https://solidarityeconomyprinciples.org/[Solidarity Economy principles].
 
