@@ -1,0 +1,119 @@
+:open-collective: https://opencollective.com/home
+= For Freelancers
+
+This page outlines what freelancers can expect to get from link:/[Sepheo].
+
+== Outline
+
+As it says on the link:/[front page]:
+
+[quote]
+--
+include::_includes/pitch_to_freelancers.adoc[]
+--
+
+== How to connect with Sepheo
+
+Interested? There are several ways to connect if so...
+
+=== Talk to us
+
+We're listening. See the links on our link:/[front page] for ways of reaching us.
+
+=== [[affiliation]]Register and become an Affiliate
+
+*Why?* If you just want to find out more, or perhaps you're looking
+for opportunities but don't want to commit to paying the fee or being
+involved too much with Sepheo, you can sign up as an *affiliate*.
+
+*How?* To do this, simply register on our directory link:/register/[here].
+
+- You may want to have your contact details, skills and CV handy, as
+  this is the main information we're gathering in the form.
+- If you have them, it also helps to have details of your:
+  * link:{open-collective}[Open Collective] user account
+  *  link:/matrix/[Matrix] user account.
+
+*What then?* You will then receive periodic status checks on your
+availability and to ensure the directory details we have on you are up
+to date.
+
+If you give us your Matrix User ID, you'll also get an invitation to
+our General chat room on link:/matrix/[our Matrix server], through which
+you can contact members and other affiliates.
+
+We may also contact about opportunities which arise that need your
+skills, and networking events in your area.
+
+=== [[membership]]Join as a Member
+
+*Why?* If you're freelancer and want to support Sepheo, meet other
+members and have a say in the direction Sepheo takes, you can join as
+a *member*.  What this means:
+
+- You can consult our matchmakers. Through them you can access the
+  directory of other members, leads, and organisations. They will help
+  you to search for opportunities and collaborators. You will also be
+  invited to get in touch with other members in your area.
+- You get consulted on major organisational decisions, since Sepheo is
+  a members association. In the first instance, this means you can
+  come to the online quarterly members calls, at which we update
+  members on the latest news, and hold the steward and matchmaker
+  elections.
+- You fund the creation of more and/or better services with a pledge
+  to pay a minimum of £5/month. This an investment in Sepheo, a
+  non-profit that exists for the benefits of its members,
+  i.e. you. After administrative costs, any surplus funds are pooled
+  to spend on more and/or better services for members later.
+
+*How?* Follow these steps:
+
+. Start by *creating an account on link:{open-collective}[Open Collective^]*,
+  if you don't have one. This is where we manage funds and pay
+  expenses. You'll notice this is entirely open and transparent.
+. *link:/register/[Register] as an affiliate* - if you've not done that
+  already (see xref:#affiliation[above].)
+. Then on our https://opencollective.com/sepheocoop[Open Collective^]
+  page, logged in with your account there, *select "Contribute" within
+  the "Member" option*.
+
+*What then?* We'll get in touch, invite you to join our members'
+ Matrix chat, and give details of how to go from there.
+
+Members are eligible to put themselves forward for the steward and
+matchmaker roles.
+- Stewards are responsible for steering the organisation. They act on
+  behalf of the membership.  The role is currently pro-bono.
+- Matchmakers are responsible for curating the network and helping
+  members find opportunities. They share a finders fee from a
+  successful matches with the organisation.
+
+
+== [[aspirations]]Future aspirations
+
+By growing our network organically, and accumulating funds from
+membership fees and matchmaking fees, we aim to:
+
+- Incorporate our organisation (although it will always remain a co-operative!)
+- Pay stewards and matchmakers for their labour.
+
+Both of these will be needed to improve the resilience of the
+organisation, which is otherwise dependent on pro-bono contributions
+and puts stewards and matchmakers on the line as decision
+makers. Voluntary workers who perform critical roles are notoriously
+subject to burn-out!
+
+The better-resourced stewards and matchmakers can then, should the
+membership still wish it, try to raise more funding and build more
+services, perhaps with more labour or capital requirements such as:
+
+- Mutual support and special interest groups.
+- Partnerships with service providers, buyers clubs.
+- Mutual insurance, bread funds, etc.
+- Training, mentoring and up-skilling.
+- Tools and guidelines for team formation and governance.
+- Assistance with incorporation of these teams.
+
+Although all of this depends on what the membership asks Sepheo to do...
+
+//  LocalWords:  Sepheo
