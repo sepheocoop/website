@@ -1,0 +1,14 @@
+= How to join as an Affiliate
+
+Follow these steps:
+
+. You may want to have your contact details, skills and CV handy, as
+  this is the main information we're gathering in the form.
+. If you have them, it also helps to have details of your:
+  * link:{open-collective}[Open Collective] user account
+  *  link:/matrix/[Matrix] user account.
+. Visit link:/register/[here] and complete the form.
+. If you provided an email address, you should receive a welcome message confirming your registration.
+. If you provided your Matrix User ID, you'll also get an invitation to
+  our General chat room on link:/matrix/[our Matrix server], through
+  which you can contact members and other affiliates.

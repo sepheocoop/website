@@ -1,0 +1,16 @@
+= How to join as a member
+
+Follow these steps:
+
+. Start by *creating an account on link:{open-collective}[Open Collective^]*,
+  if you don't have one. This is where we manage funds and pay
+  expenses.
+. *link:/register/[Register] as an affiliate* - if you've not done that
+  already (see xref:#affiliation[above].)
+. Then on our https://opencollective.com/sepheocoop[Open Collective^]
+  page, logged in with your account there, *select "Contribute" within
+  the "Member" option*.
+
+You should receive a confirmation from Open Collective. If this is
+your first contact with us, we will be in touch.
+

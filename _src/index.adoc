@@ -14,31 +14,25 @@ Sepheo is a mutual society for self-employed professionals.
 
 == Sepheo what?
 
-"Sepheo" stands for _"Self-Employed People Helping Each Other"_... hopefully this explains itself!
+"Sepheo" stands for _"Self-Employed People Helping Each Other"_... that's the basic idea.
 
 include::_includes/pitch_to_freelancers.adoc[]
 
 == What we are not...
 
-*If you are a freelancer:* we do not supply your labour to clients, we
-support you, and introduce you to *client organisations* and *other
+If you are a freelancer: :: We do not *supply your labour* to clients -
+we support you, and introduce you to *client organisations* and *other
 freelancers*.
++
+You need to have the core skills - *we can't train you to do your
+job*. But we do plan to *partner with people who provide training in a
+range of areas*.
 
-*If you are an organisation:* we do not deliver solutions or services
-to you, we introduce you to *people who can*.
-
-In other words, we do not sit between clients and freelancers, taking
-a cut.  After the initial introduction, for which we accept a fee to
-cover our costs, you have *a direct relationship with your clients*.
-
-Freelancers are then directly responsible to their clients and vice versa. Meaning:
-
-- We are not an agency.
-- We are not an intermediary service provider.
-- We are not an umbrella company.
-
-Note that we *can't to train you* to become a freelancer. But we do
-plan to *partner with people who can*.
+If you are an organisation: :: We do not deliver solutions or services
+to you - we introduce you to *people who can*.
++
+After the initial introduction, for which we accept a fee to cover our
+costs, freelancers have *a direct relationship with their clients*.
 
 == Contact Us
 
@@ -53,5 +47,4 @@ GitHub: https://github.com/sepheocoop[github.com/sepheocoop^]
 
 E-mail: mailto:contact@sepheo.co[]
 
-Matrix chat: details link:/matrix/[here].
 --
