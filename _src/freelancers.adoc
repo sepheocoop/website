@@ -24,43 +24,40 @@ Here are several ways to connect.
 
 === 1. Talk to us
 
-We're listening. See the links on our link:/[front page] for ways of reaching us.
+We're listening. See our link:/[front page] for ways of reaching us.
 
 === [[affiliation]]2. Register and become an Affiliate
 
-Why?:: If you just want to find out more, or perhaps you're looking
-for opportunities but don't want to commit to paying the fee or being
-involved too much with Sepheo, you can sign up as an *affiliate*.
+Why?:: Perhaps you want to dip your toe in, open the door to
+opportunities - but without committing to making contributions or
+getting involved.
 
 How?:: To do this, simply register on our directory. link:/affiliation/[More details here...]
 
-What then?:: You will then receive periodic status checks on your
-availability and to ensure the directory details we have on you are up
-to date.
+What then?:: You get periodic status checks on your details and availability.
 +
-We may also contact about opportunities which arise that need your
-skills, and networking events in your area.
+We may also contact about opportunities which arise, if your skills match.
 
 === [[membership]]3. Join as a Member
 
-Why?:: If you're freelancer and want to support Sepheo, meet other
-members and have a say in the direction Sepheo takes, you can join as
-a *member*.  What this means:
+Why?:: You're freelancer: you'll want to find collaborators and
+clients. You will also be helping us help *you* by supporting our
+platform.  What this means...
 +
-- You can consult our matchmakers. Through them you can access the
+- *You get put in touch* with other members in your area.
+- *You can consult our matchmakers.* Through them you can access the
   directory of other members, leads, and organisations. They will help
-  you to search for opportunities and collaborators. You will also be
-  invited to get in touch with other members in your area.
-- You get consulted on major organisational decisions, since Sepheo is
-  a members association. In the first instance, this means you can
-  come to the online quarterly members calls, at which we update
-  members on the latest news, and hold the steward and matchmaker
-  elections.
-- You fund the creation of more and/or better services with a pledge
+  you to search for opportunities and collaborators.
+- *You get consulted on major organisational decisions.* Sepheo is a
+  members' association.
++
+In the first instance, this means you can come to the online quarterly
+  members calls. There we report back to our members, consult them,
+  and elect the steward and matchmakers.
+- *You fund the creation of more and/or better services* with a pledge
   to pay a minimum of £5/month. This an investment in Sepheo, a
   non-profit that exists for the benefits of its members,
-  i.e. you. After administrative costs, any surplus funds are pooled
-  to spend on more and/or better services for members later.
+  i.e. *you*.
 
 How?:: Contribute as a "Member" on our Open Collective
 page. link:/membership/[More details here...]
@@ -72,31 +69,36 @@ What then?:: We'll get in touch, invite you to join our members'
 
 == [[aspirations]]Future aspirations
 
-By growing our network organically, and accumulating funds from
-membership fees and matchmaking fees, plan to:
+Our plan is to growing our network organically, accumulating funds from
+membership fees and matchmaking fees.
+
+When the funds permit it, we then:
 
 - Incorporate our organisation (although it will always remain a co-operative!)
 - Pay stewards and matchmakers for their labour.
 
-Both of these will be needed to improve the resilience of the
-organisation, which is otherwise dependent on pro-bono contributions
-and puts stewards and matchmakers on the line as decision
-makers. Voluntary workers who perform critical roles are notoriously
-subject to burn-out!
+These will improve resilience and widen the options available to the
+organisation. Stewards and matchmakers will be given greater security
+and therefore the means to better serve the organisation.
 
-The better-resourced stewards and matchmakers can then, should the
-membership still wish it, try to raise more funding and build more
-services, perhaps with more labour or capital requirements. Some
-ideas:
+If this works to plan, members get better support, more opportunities,
+and newcomers more reasons to join. With better funding, the
+organisation could become more ambitious with the services it
+provides.
+
+Some ideas of things this could lead to:
 
 - Mutual support and special interest groups.
 - Buyers' clubs to negotiate reduced prices.
 - Mutual insurance, bread funds, etc.
 - Training, mentoring and up-skilling.
 - Tools and guidelines for team formation and governance.
-- Assistance with incorporation of these teams.
+- Support for incorporation of these teams as businesses in their own right.
 
-These are examples - ultimately it depends on our resources and what
-the membership asks for.
+In particular, we want to support *existing co-operatives*, create
+*new co-operatives* and promote co-operative culture generally.
+
+However, these are just examples - ultimately it depends on our
+resources and what the membership asks for.
 
 //  LocalWords:  Sepheo
