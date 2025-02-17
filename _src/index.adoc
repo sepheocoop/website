@@ -4,14 +4,7 @@
 [.centre]
 --
 Sepheo is a mutual society for self-employed professionals.
-
-[quick-links]
 --
-- link:/freelancers/[For freelancers]
-- link:/organisations/[For organisations]
---
---
-
 == Sepheo what?
 
 "Sepheo" stands for _"Self-Employed People Helping Each Other"_... that's the basic idea.
