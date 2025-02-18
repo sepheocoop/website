@@ -1,4 +1,5 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import EleventyAsciidoc from "eleventy-plugin-asciidoc";
 import less from "less";
 import { existsSync, rmSync } from "node:fs";
 
@@ -20,6 +21,12 @@ export default function (config) {
     jsTruthy: true,
   });
   config.addPlugin(EleventyHtmlBasePlugin);
+  config.addPlugin(EleventyAsciidoc, {
+    attributes: {
+      showtitle: true, // Makes level 1 headings -> <h1> + <title>, instead of just <title>
+    },
+    safe: "unsafe",
+  });
 
   // Transform less.js
   // Adapted from https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy

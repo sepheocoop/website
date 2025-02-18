@@ -1,0 +1,15 @@
+include::index.adoc[]
+////
+NOTE: this file exists to allow URLs to https://sepheo.co/op to reach
+the landing page content.
+
+It replaces the mechanism used with a markdown index.md, which doesn't
+currently work with AsciiDoc. See https://github.com/saneef/eleventy-plugin-asciidoc/issues/21
+
+However, a front-matter block (delimited with `---`) *may* be inserted
+into an .adoc file in the context of Elventy, using
+eleventy-asciidoc-plugin.  However, this will get inserted verbatim as
+text when combined with the include above.  So we don't do that!
+
+Front-matter blocks are otherwise fine in .adoc files.
+////
