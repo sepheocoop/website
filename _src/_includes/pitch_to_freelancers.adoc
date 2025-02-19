@@ -1,4 +1,4 @@
-We are a mutual support network run by freelancers for freelancers,
+We are a society run by freelancers for freelancers,
 providing a platform for *skills exchange*. We do this by:
 
 - Compiling a *directory* of freelancers, organisations, and leads.
@@ -6,15 +6,9 @@ providing a platform for *skills exchange*. We do this by:
 - Building *teams* of freelancers.
 - *Matching* freelancers to organisations' needs.
 
-We are self-funded, and organised democratically and accountably using the
-principles of the
-https://ica.coop/en/whats-co-op/co-operative-identity-values-principles[Rochdale
-Pioneers^] and the
-https://en.wikipedia.org/wiki/Solidarity_economy#Core_values_and_principles[Solidarity
-Economy^].
-
-We currently achieve our core aims with minimal costs. In future, we
-have ambitious goals to expand our network, with the help of our
-members.
+We are self-funded and organise democratically and accountably using
+https://ica.coop/en/whats-co-op/co-operative-identity-values-principles[co-operative principles^].  Our founding inspiration is the
+https://en.wikipedia.org/wiki/Solidarity_economy#Core_values_and_principles[solidarity
+economy^]. Our vision is to support collaboration with and creation of aligned organisations.
 
 You can join our directory by link:/register/[registering].
