@@ -1,0 +1,16 @@
+We are a society run by freelancers for freelancers,
+providing a platform for *skills exchange*. We do this by:
+
+- Compiling a *directory* of freelancers, organisations, and leads.
+- Organising *networking events* in person and online.
+- Building *teams* of freelancers.
+- *Matching* freelancers to organisations' needs.
+
+We are self-funded and organise democratically and accountably using
+https://ica.coop/en/whats-co-op/co-operative-identity-values-principles[co-operative principles^].  Our founding inspiration is the
+https://en.wikipedia.org/wiki/Solidarity_economy#Core_values_and_principles[solidarity
+economy^]. Our vision is to support collaboration with and creation of aligned organisations.
+
+You can join our directory by sending us your details via our
+link:/register/[registration form]. We'll then send you an email
+outlining the next steps.

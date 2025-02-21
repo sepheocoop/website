@@ -1,19 +1,33 @@
-// (See note about frontmatters in op.adoc)
-= sepheo coop
+// (See note about front-matter in op.adoc)
+= We are Sepheo!
 
-SEPHEO (Self-Employed People Helping Each Other) Coop is a mutual society for self-employed professionals. We make it easy for freelancers to connect with coops and other aligned organisations.
+[.centre]
+--
+Sepheo is a mutual society for self-employed professionals.
+--
+== Sepheo what?
 
-As a coop, we subscribe to the https://en.wikipedia.org/wiki/Rochdale_Principles[Rochdale Co-operative principles], and the https://solidarityeconomyprinciples.org/[Solidarity Economy principles].
+"Sepheo" stands for _"Self-Employed People Helping Each Other"_... that's the basic idea.
 
-The problem: whilst employment in a typical company can be alienating (for reasons well understood to the co-op movement), co-ops are not a widely accessible alternative for most people. Their relative rarity, low visibility and unfamiliarity mean they're often not perceived as existing, yet alone as a possible alternative - even then they may be dismissed. In the other direction, co-ops often require a much higher degree of trust to grant membership than they would employment.
+include::_includes/pitch_to_freelancers.adoc[]
 
-Freelancing is another way to attain more autonomy, and is becoming more common in the contemporary "gig economy", but can be precarious and isolating. It requires various legal, business, and social expertises outside the core skills of a professional - not to mention the confidence to attain these.
+== What we are not...
 
-Our aim is to make co-operatives more visible and easier to access through the intermediate step of freelancing within co-operative contexts. Likewise, to make freelancers more visible and easier to access for co-operatives.
+If you are a freelancer: :: We do not *supply your labour* to clients -
+we support you, and introduce you to *client organisations* and *other
+freelancers*.
++
+You need to have the core skills - *we can't train you to do your
+job*. But we do plan to *partner with people who provide training in a
+range of areas*.
 
-Sepheo connects co-operatives and freelancers by regularly checking-in with coops about their capacity needs and maintaining a list of freelancers that want to work with co-ops.
+If you are an organisation: :: We do not deliver solutions or services
+to you - we introduce you to *people who can*.
++
+After the initial introduction, for which we accept a fee to cover our
+costs, freelancers have *a direct relationship with their clients*.
 
-In the long term we want to act as a generative force in the coop economy, multiplying the efforts of others beyond what they thought possible.
+== Contact Us
 
 [#links]
 --

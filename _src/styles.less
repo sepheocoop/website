@@ -23,7 +23,7 @@ body,
 .container {
   font-size: 2vh;
   height: 100%;
-  .sans-font;
+  .suse-font;
 }
 
 h1,h2,h3,h4 {
@@ -49,14 +49,21 @@ h1 {
   }
 }
 
+dt {
+  font-weight: bolder;
+}
+
 p {
-  .suse-font;
   margin: 0.5rem 0rem;
 }
 
 // Render somewhat spam-resistant email links like this: `jbloggs<span class="at">example.com</span>`
 .at::before {
   content: '@';
+}
+
+.centre {
+  text-align: center;
 }
 
 // Styling for the #links box

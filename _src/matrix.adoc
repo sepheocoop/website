@@ -1,0 +1,18 @@
+= Our Matrix rooms
+
+https://matrix.org/[Matrix^] is a secure, open-source chat platform,
+similar to Slack, Mattermost, or Discord. 
+
+Matrix channels are called "rooms".
+
+There is more than one client application, but the main one is called
+https://element.io/[Element^], which runs on the web or on your phone.
+
+It is possible to bridge Matrix rooms to other platforms, and we hope
+to use that to allow people to join us from other platforms. This is a
+work in progress, however!
+
+Our "General" matrix room, which is for members and affiliates, is
+https://matrix.to/#/!SHryzSYEdMpXUCNuyV:spacetu.be?via=matrix.org&via=digitalcommons.coop&via=spacetu.be[here^]. We
+also have others for different purposes, and these are used as our
+primary means for coordination.
