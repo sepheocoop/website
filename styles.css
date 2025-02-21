@@ -18,7 +18,10 @@ body,
 .container {
   font-size: 2vh;
   height: 100%;
-  font-family: sans;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 h1,
 h2,
@@ -47,15 +50,17 @@ h1 {
 .container h4 {
   text-align: center;
 }
+dt {
+  font-weight: bolder;
+}
 p {
-  font-family: "SUSE", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
   margin: 0.5rem 0rem;
 }
 .at::before {
   content: '@';
+}
+.centre {
+  text-align: center;
 }
 #links {
   display: flex;
