@@ -1,0 +1,40 @@
+---
+# Adapted from deploy-to-ghpages.yml
+# Amended to deploy branches beginning with `preview/...` as `_preview/...`
+name: Deploy preview/ branches to GitHub Pages
+
+on:
+  push:
+    branches:
+      # Deploy preview branches on push
+      - preview/**
+
+jobs:
+  deploy_preview:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      PREVIEW_PATH: _preview
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: set preview path from GITHUB_REF
+        run: |
+          echo "PATH_PREFIX=$PREVIEW_PATH/${GITHUB_REF#*preview/}" >> $GITHUB_ENV
+
+      - name: Build the site with a preview prefix
+        uses: ./.github/actions/build
+        with:
+          path-prefix: ${{ env.PATH_PREFIX }}
+
+      - name: Deploy to preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./_site
+          target-folder: ${{ env.PATH_PREFIX }}
+

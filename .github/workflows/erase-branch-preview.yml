@@ -1,0 +1,27 @@
+---
+# Adapted from https://daiyi.co/blog/pr-previews-for-github-pages/
+
+name: delete preview branch on branch deletion
+on:
+  delete:
+    
+
+jobs:
+  erase_branch_preview:
+    if: github.event.ref_type == "branch" && startsWith(github.event.ref, "refs/heads/preview/")
+    runs-on: ubuntu-24.04
+    env:
+      PREVIEW_PATH: _preview      
+    steps:
+      - name: set preview path from GITHUB_REF
+        run: |
+          echo "PATH_PREFIX=$PREVIEW_PATH/${GITHUB_REF#*preview/}" >> $GITHUB_ENV
+          
+      - name: make empty dir
+        run: mkdir empty
+
+      - name: empty PR folder ${{ env.PATH_PREFIX }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./empty
+          target-folder: ${{ env.PATH_PREFIX }}
