@@ -7,20 +7,19 @@ on:
     types: [closed]
 
 jobs:
-  delete_preview:
+  erase_pr_preview:
     runs-on: ubuntu-24.04
     env:
-      PR_PATH_PREFIX: pull/${{github.event.number}}/
+      PATH_PREFIX: pull/${{github.event.number}}/
     steps:
       - name: make empty dir
         run: mkdir empty
 
-      - name: delete folder
-        uses: peaceiris/actions-gh-pages@v4
+      - name: empty PR folder ${{ env.PATH_PREFIX }}
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./empty
-          destination_dir: ${{ env.PR_PATH_PREFIX }}
+          folder: ./empty
+          target-folder: ${{ env.PATH_PREFIX }}
 
       - name: Comment on PR
         uses: hasura/comment-progress@v2.2.0
@@ -30,4 +29,4 @@ jobs:
           number: ${{ github.event.number }}
           id: deploy-preview
           message: |
-            🪓 PR closed, deleted preview at https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH_PREFIX }}
+            🪓 PR closed, deleted preview at https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PATH_PREFIX }}

@@ -1,0 +1,36 @@
+---
+name: Build Website
+description: Bulds the Sepheo website with an optional path prefix
+inputs:
+  path-prefix:
+    description: |
+      Sets the path prefix to pass to Eleventy. If absent or blank,
+      the prefix is set to '/'. If present, the value is appended to
+      '/'.
+    required: false
+    
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "23.6.0"
+
+    - name: Persist npm cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+
+    - name: Persist Eleventy .cache
+      uses: actions/cache@v3
+      with:
+        path: ./.cache
+        key: ${{ runner.os }}-eleventy-fetch-cache
+
+    - run: npm install
+      shell: bash
+
+    - run: npm run build -- "--pathprefix=/${{ inputs.path-prefix }}"
+      shell: bash

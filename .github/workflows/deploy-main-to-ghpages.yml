@@ -1,0 +1,33 @@
+---
+name: Deploy main branch to GitHub Pages
+
+on:
+  push:
+    branches:
+      # Deploy the main branch on commit
+      - main
+
+jobs:
+  deploy_main:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      PREVIEW_PATH: _preview
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build the site with no prefix
+        uses: ./.github/actions/build
+
+      - name: Deploy the site at the top-level
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./_site
+          # Don't clean out existing PR deploy dirs
+          clean-exclude: |
+            ${{ env.PREVIEW_PATH }}
