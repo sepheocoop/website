@@ -1,0 +1,62 @@
+---
+# Adapted from https://www.11ty.dev/docs/deployment/#mini-tutorials
+# Amended to incorporate site previews as per https://daiyi.co/blog/pr-previews-for-github-pages/
+name: Deploy PRs to GitHub Pages
+
+on:
+  # This will publish a site preview on every pull request, and also
+  # run the build command to test if the site is broken.
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy_pr:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      # If you're using the default github pages url, use this instead:
+      # DOMAIN: ${{ github.actor }}.github.io
+      DOMAIN: sepheo.co
+      PREVIEW_PATH: _preview
+      PATH_PREFIX: ${{ env.PREVIEW_PATH }}/pr-${{github.event.number}}/
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Comment on PR
+        uses: hasura/comment-progress@v2.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "Starting deployment of preview ⏳..."
+
+      - name: Build the site with a PR prefix
+        uses: ./.github/actions/build
+        with:
+          path-prefix: ${{ env.PATH_PREFIX }}
+
+      - name: Deploy to PR preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./_site
+          target-folder: ${{ env.PATH_PREFIX }}
+
+      - name: Update PR comment
+        uses: hasura/comment-progress@v2.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: |
+            A preview of ${{ github.event.after }} is uploaded and can be seen here:
+
+            ✨ https://${{ env.DOMAIN }}/${{ env.PATH_PREFIX}} ✨
+
+            Changes may take a few minutes to propagate. Since this is a preview of production, content with `draft: true` will not be rendered. The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PATH_PREFIX }}
