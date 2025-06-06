@@ -38,6 +38,7 @@ OpenCollective: https://opencollective.com/sepheocoop#category-ABOUT[opencollect
 
 GitHub: https://github.com/sepheocoop[github.com/sepheocoop^]
 
+Social Media: https://social.coop/@sepheo
+
 E-mail: mailto:contact@sepheo.co[]
 
---
