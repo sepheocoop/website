@@ -1,0 +1,26 @@
+// (See note about front-matter in op.adoc)
+= We are Sepheo!
+
+[.centre]
+--
+Sepheo is a mutual society for self-employed professionals.
+--
+== Sepheo what?
+
+"Sepheo" stands for _"Self-Employed People Helping Each Other"_... that's the basic idea.
+
+include::_includes/pitch_to_freelancers.adoc[]
+
+
+== Contact Us
+
+[#links]
+--
+
+Website: https://sepheo.co
+
+Social Media: https://social.coop/@sepheo
+
+E-mail: mailto:contact@sepheo.co[]
+
+--
