@@ -34,6 +34,8 @@ costs, freelancers have *a direct relationship with their clients*.
 
 Join our list of freelancers link:/register[here^].
 
+Forum: link:/community/[Sepheo community].
+
 OpenCollective: https://opencollective.com/sepheocoop#category-ABOUT[opencollective.com/sepheocoop^]
 
 GitHub: https://github.com/sepheocoop[github.com/sepheocoop^]
@@ -42,3 +44,4 @@ Social Media: https://social.coop/@sepheo
 
 E-mail: mailto:contact@sepheo.co[]
 
+--

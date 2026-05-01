@@ -13,6 +13,7 @@ export default function (config) {
   config.setLayoutsDirectory("_layouts");
   config.addPassthroughCopy("_src/CNAME");
   config.addPassthroughCopy("_src/**/*.css");
+  config.addPassthroughCopy("_src/**/*.js");
   config.setLiquidOptions({
     outputEscape: "escape",
     strictVariables: true,
