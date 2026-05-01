@@ -1,1 +1,56 @@
-// Community page styles will be built up in small layers.
+:root {
+  --community-body-font: "Outfit", system-ui, sans-serif;
+  --community-max-width: 1080px;
+  --community-border: #e4e6e5;
+  --community-text: #141616;
+  --community-text-soft: #6a7474;
+}
+
+body.community-page {
+  margin: 0;
+  color: var(--community-text);
+  font-family: var(--community-body-font);
+  line-height: 1.6;
+}
+
+.community-wrap {
+  max-width: var(--community-max-width);
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.category-grid {
+  border: 1px solid var(--community-border);
+}
+
+.category-row {
+  display: block;
+  padding: 16px;
+  border-bottom: 1px solid var(--community-border);
+  color: inherit;
+  text-decoration: none;
+}
+
+.category-row:last-child {
+  border-bottom: 0;
+}
+
+.category-info {
+  display: grid;
+}
+
+.category-info small,
+.thread-list span {
+  color: var(--community-text-soft);
+}
+
+.category-dot,
+.category-pill,
+.thread-avatars {
+  display: none;
+}
+
+.thread-list {
+  padding: 0;
+  list-style: none;
+}
