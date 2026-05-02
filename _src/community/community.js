@@ -1,10 +1,10 @@
 const root = document.documentElement;
-const themeButton = document.querySelector('.js-theme-toggle');
-const themeIcon = document.querySelector('.js-theme-icon');
+const themeButtons = document.querySelectorAll('.js-theme-toggle');
+const themeIcons = document.querySelectorAll('.js-theme-icon');
 const menuButton = document.querySelector('.js-community-menu');
 const navLinks = document.querySelector('.js-community-links');
 
-const themeIcons = {
+const themeIconMarkup = {
   dark: `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="4"></circle>
@@ -28,16 +28,17 @@ const themeIcons = {
 function setTheme(theme) {
   root.dataset.theme = theme;
 
-  if (themeIcon) {
-    themeIcon.innerHTML = theme === 'dark' ? themeIcons.dark : themeIcons.light;
-  }
+  themeIcons.forEach((themeIcon) => {
+    themeIcon.innerHTML =
+      theme === 'dark' ? themeIconMarkup.dark : themeIconMarkup.light;
+  });
 
-  if (themeButton) {
+  themeButtons.forEach((themeButton) => {
     themeButton.setAttribute(
       'aria-label',
       theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme',
     );
-  }
+  });
 }
 
 function getInitialTheme() {
@@ -56,25 +57,39 @@ function getInitialTheme() {
     : 'light';
 }
 
+function openMenu() {
+  navLinks?.classList.add('is-open');
+  menuButton?.setAttribute('aria-expanded', 'true');
+}
+
 function closeMenu() {
   navLinks?.classList.remove('is-open');
   menuButton?.setAttribute('aria-expanded', 'false');
 }
 
+function isMenuOpen() {
+  return menuButton?.getAttribute('aria-expanded') === 'true';
+}
+
 setTheme(getInitialTheme());
 
-themeButton?.addEventListener('click', () => {
-  const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
-  setTheme(nextTheme);
+themeButtons.forEach((themeButton) => {
+  themeButton.addEventListener('click', () => {
+    const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
 
-  try {
-    window.localStorage.setItem('sepheo-community-theme', nextTheme);
-  } catch {}
+    try {
+      window.localStorage.setItem('sepheo-community-theme', nextTheme);
+    } catch {}
+  });
 });
 
 menuButton?.addEventListener('click', () => {
-  const isOpen = navLinks?.classList.toggle('is-open') ?? false;
-  menuButton.setAttribute('aria-expanded', String(isOpen));
+  if (isMenuOpen()) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 });
 
 navLinks?.addEventListener('click', (event) => {
