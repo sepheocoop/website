@@ -2,13 +2,31 @@
 title: Sepheo Community
 description: The Sepheo community hub for self-employed professionals, co-operative freelancers, and aligned organisations.
 layout: community.liquid
+permalink: /community/
 ---
-
 <nav class="community-nav" aria-label="Community navigation">
   <div class="community-nav-inner">
     <a href="/" class="community-logo">Sepheo</a>
-    <div class="community-nav-links">
-      <a href="#forum">Forum</a>
+    <button
+      class="community-menu-button js-community-menu"
+      type="button"
+      aria-controls="community-links"
+      aria-expanded="false">
+      Menu
+    </button>
+    <div class="community-nav-right">
+      <ul class="community-nav-links js-community-links" id="community-links">
+        <li>
+          <a href="#story">About</a>
+        </li>
+        <li>
+          <a href="#forum">Forum</a>
+        </li>
+
+        <li>
+          <a href="#events">Events</a>
+        </li>
+      </ul>
       <a href="/register/" class="community-join">Join</a>
     </div>
   </div>
@@ -29,10 +47,71 @@ layout: community.liquid
     </div>
   </section>
 
+  <section class="community-section" id="story">
+    <div class="community-wrap">
+      <header class="community-section-head">
+        <p class="community-label tone-green">About</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-narrative">
+          <p>
+            Sepheo grew out of
+            <strong>Code-Operative</strong>, a software co-op founded in 2017                      
+            in the North East of England. Over its lifetime Code-Op gave many people
+            their first steps into both the co-operative movement and a technology career,
+            granting its members a greater degree of autonomy over their economic lives.
+          </p>
+          <p>
+            After years of exploration, the members realised they had to choose between three                      
+            incompatible models: recruitment, consultancy, and product development. They chose to
+            focus entirely on
+            <strong>connecting freelancers to roles within co-ops and aligned organisations.</strong>
+          </p>
+          <p>So Code-Operative was dissolved with gratitude, and Sepheo was born.</p>
+          <p>
+            Sepheo sits within a rich ecosystem. We are members of
+            <strong>
+              <a href="https://www.co-ops.tech">CoTech,</a>
+            </strong>
+            a network of 40+ UK tech co-operatives,                      
+            and were inspired by
+            <strong>
+              <a href="https://www.happy-dev.fr">Happy Dev,</a>
+            </strong>
+            a federation                      
+            of 300+ freelancers across France. We believe the co-op economy grows faster when its
+            organisations support each other. There are a lot of amazing people out there and we want 
+            to help you meet them.
+          </p>
+        </div>
+
+        <div class="about-aside" aria-label="Sepheo model summary">
+          <article class="about-card">
+            <p class="about-card-label tone-rose">The name</p>
+            <h2>S.E.P.H.E.O.</h2>
+            <p>Self-Employed People Helping Each Other. A mutual network run on co-operative principles.</p>
+          </article>
+          <article class="about-card">
+            <p class="about-card-label tone-teal">For Freelancers</p>
+            <h2>A support network</h2>
+            <p>We do not supply your labour to clients - we support you, and introduce you to client organisations and other freelancers. You need to have the core skills - we can't train you to do your job. But we do plan to partner with people who provide training in a range of areas.</p>
+          </article>
+          <article class="about-card">
+            <p class="about-card-label tone-amber">For Organisations</p>
+            <h2>A talent network</h2>
+            <p>We do not deliver solutions or services to you - we introduce you to people who can. After the initial introduction, for which we accept a fee to cover our costs, freelancers have a direct relationship with their clients.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="community-section" id="forum">
     <div class="community-wrap">
       <header class="community-section-head">
         <p class="community-label tone-purple">Forum</p>
+        {% comment %} <h2>Places to start talking</h2> {% endcomment %}
         <p>The forum is the front door for introductions, practical questions, skill-sharing, and governance conversations.</p>
       </header>
 
@@ -43,6 +122,7 @@ layout: community.liquid
             <strong>Start here</strong>
             <small>How Sepheo works, what to expect, and community guidelines.</small>
           </span>
+          <span class="category-pill badge-green">Guide</span>
         </a>
         <a href="https://forum.sepheo.co/c/introductions" class="category-row">
           <span class="category-dot dot-blue" aria-hidden="true"></span>
@@ -50,6 +130,7 @@ layout: community.liquid
             <strong>Introductions</strong>
             <small>Who you are, what you offer, and what you need.</small>
           </span>
+          <span class="category-pill badge-blue">Say hello</span>
         </a>
         <a href="https://forum.sepheo.co/c/skill-shares" class="category-row">
           <span class="category-dot dot-amber" aria-hidden="true"></span>
@@ -57,6 +138,7 @@ layout: community.liquid
             <strong>Skill shares</strong>
             <small>Propose sessions, share notes, and learn from each other.</small>
           </span>
+          <span class="category-pill badge-amber">Learn</span>
         </a>
         <a href="https://forum.sepheo.co/c/show-and-tell" class="category-row">
           <span class="category-dot dot-rose" aria-hidden="true"></span>
@@ -64,6 +146,7 @@ layout: community.liquid
             <strong>Show and tell</strong>
             <small>Projects, prototypes, demos, and portfolio feedback.</small>
           </span>
+          <span class="category-pill badge-rose">Share</span>
         </a>
         <a href="https://forum.sepheo.co/c/ask-for-help" class="category-row">
           <span class="category-dot dot-purple" aria-hidden="true"></span>
@@ -71,6 +154,7 @@ layout: community.liquid
             <strong>Ask for help</strong>
             <small>Technical questions, freelancing questions, and co-op stuff.</small>
           </span>
+          <span class="category-pill badge-purple">Support</span>
         </a>
         <a href="https://forum.sepheo.co/c/opportunities" class="category-row">
           <span class="category-dot dot-teal" aria-hidden="true"></span>
@@ -78,6 +162,7 @@ layout: community.liquid
             <strong>Opportunities and collaborations</strong>
             <small>Leads, collaboration requests, and introductions.</small>
           </span>
+          <span class="category-pill badge-teal">Work</span>
         </a>
         <a href="https://forum.sepheo.co/c/proposals" class="category-row">
           <span class="category-dot dot-slate" aria-hidden="true"></span>
@@ -85,11 +170,12 @@ layout: community.liquid
             <strong>Proposals and governance</strong>
             <small>Decisions, direction, and how we run things.</small>
           </span>
+          <span class="category-pill badge-slate">Decide</span>
         </a>
       </div>
 
       <div class="thread-panel">
-        <h2>Good first posts</h2>
+        <h3>Get started</h3>
         <ul class="thread-list">
           <li>
             <span class="thread-avatars" aria-hidden="true">
@@ -119,8 +205,121 @@ layout: community.liquid
 
       <div class="community-actions community-actions-spaced">
         <a href="https://forum.sepheo.co" class="community-button community-button-outline">Visit the forum</a>
-        <a href="https://forum.sepheo.co/c/introductions" class="community-button community-button-outline">Post an introduction</a>
+      </div>
+    </div>
+  </section>
+  <section class="community-section" id="events">
+    <div class="community-wrap">
+      <header class="community-section-head">
+        <p class="community-label tone-amber">Events</p>
+        <h2>Ways to get involved</h2>
+        <p>Everyone has something worth sharing. Come along and see what happens.</p>
+      </header>
+
+      <div class="events-list">
+        <article class="event-card">
+          <p class="event-type tone-green">Monthly</p>
+          <h3>Community call</h3>
+          <p>Updates, discussion, proposals, and what is next.</p>
+        </article>
+        <article class="event-card">
+          <p class="event-type tone-blue">As needed</p>
+          <h3>Onboarding session</h3>
+          <p>For new people who want to understand what this is.</p>
+        </article>
+        <article class="event-card">
+          <p class="event-type tone-amber">Member-led</p>
+          <h3>Skill-share</h3>
+          <p>Demos, walkthroughs, and practical learning.</p>
+        </article>
+        <article class="event-card">
+          <p class="event-type tone-purple">Informal</p>
+          <h3>Coworking and social</h3>
+          <p>Shared work sessions and chatting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="community-section" id="join">
+    <div class="community-wrap">
+      <div class="join-box">
+        <h2>Get involved</h2>
+        <p>
+          Have a look around first. You can join our directory by sending us your details via our registration form, and we'll send you an email outlining the next steps.
+        </p>
+        <ol class="join-steps">
+          <li>
+            <strong>Browse</strong>
+            - read the site and forum. No account needed.</li>
+          <li>
+            <strong>Join the forum</strong>
+            - create a Discourse account and say hello.</li>
+
+          <li>
+            <strong>Register</strong>
+            - send us your details and join the directory.</li>
+          <li>
+            <strong>Meet the community</strong>
+            - come to a community call or onboarding session.</li>
+        </ol>
+        <div class="community-actions">
+          <a href="https://forum.sepheo.co" class="community-button community-button-outline">Visit the forum</a>
+          <a href="/register/" class="community-button community-button-outline">Register with Sepheo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="community-section">
+    <div class="community-wrap">
+      <header class="community-section-head">
+        <p class="community-label tone-teal">Organisations</p>
+        <h2>Looking for aligned people?</h2>
+        <p>
+          We are a collective solution to the capacity problems                      
+          that plague small co-op businesses, smoothing out the flow of work and making it easier
+          to find people who understand your values. Sepheo is not a recruitment agency.
+        </p>
+      </header>
+      <div class="community-actions">
+        <a href="mailto:contact@sepheo.co" class="community-button community-button-outline">Get in touch</a>
+      {% comment %} <a href="#people" class="community-button community-button-outline">Browse profiles</a> {% endcomment %}
       </div>
     </div>
   </section>
 </main>
+
+<footer class="community-footer">
+  <div class="community-wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Sepheo</h2>
+        <ul>
+          <li><a href="/">Website</a></li>
+          <li><a href="https://forum.sepheo.co">Forum</a></li>
+          <li><a href="#people">Directory</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="/register/">Register</a></li>
+          <li><a href="mailto:contact@sepheo.co">Email</a></li>
+          <li><a href="https://github.com/sepheoco-op">GitHub</a></li>
+          <li><a href="https://social.co-op/@sepheo">Mastodon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Roots</h2>
+        <ul>
+          <li><a href="https://opencollective.com/sepheoco-op">Open Collective</a></li>
+          <li><a href="https://ica.co-op/en/whats-co-op/co-operative-identity-values-principles">Co-op principles</a></li>
+          <li><a href="https://www.co-ops.tech">CoTech network</a></li>
+          <li><a href="https://code-operative.co.uk">Code-Operative history</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
