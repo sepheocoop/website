@@ -3,9 +3,10 @@ const themeButtons = document.querySelectorAll('.js-theme-toggle');
 const themeIcons = document.querySelectorAll('.js-theme-icon');
 const menuButton = document.querySelector('.js-community-menu');
 const navLinks = document.querySelector('.js-community-links');
+const themeTransitionClass = 'is-theme-switching';
 
 const themeIconMarkup = {
-  dark: `
+  switchToLight: `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="4"></circle>
       <path d="M12 2v2"></path>
@@ -18,7 +19,7 @@ const themeIconMarkup = {
       <path d="m19.07 4.93-1.41 1.41"></path>
     </svg>
   `,
-  light: `
+  switchToDark: `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z"></path>
     </svg>
@@ -26,11 +27,14 @@ const themeIconMarkup = {
 };
 
 function setTheme(theme) {
+  root.classList.add(themeTransitionClass);
   root.dataset.theme = theme;
 
   themeIcons.forEach((themeIcon) => {
     themeIcon.innerHTML =
-      theme === 'dark' ? themeIconMarkup.dark : themeIconMarkup.light;
+      theme === 'dark'
+        ? themeIconMarkup.switchToLight
+        : themeIconMarkup.switchToDark;
   });
 
   themeButtons.forEach((themeButton) => {
@@ -38,6 +42,10 @@ function setTheme(theme) {
       'aria-label',
       theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme',
     );
+  });
+
+  window.requestAnimationFrame(() => {
+    root.classList.remove(themeTransitionClass);
   });
 }
 
