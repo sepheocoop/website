@@ -1,7 +1,7 @@
 :root {
   --community-display-font: 'Fraunces', Georgia, serif;
   --community-body-font: 'Outfit', system-ui, sans-serif;
-  --community-radius: 12px;
+  --community-radius: 10px;
   --community-radius-small: 8px;
   --community-max-width: 74.25rem;
   --community-page-gutter: clamp(1.25rem, 4vw, 2.5rem);
@@ -49,11 +49,9 @@
   --community-text-soft: #6a7474;
   --community-border: #e4e6e5;
   --community-border-soft: #eeefee;
-  --community-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02);
+
   --community-nav-bg: var(--community-bg);
-  --community-shadow-dropdown:
-    0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+
   --community-scrollbar-track: var(--community-bg);
   --community-scrollbar-thumb: #b8c0bf;
   --community-scrollbar-thumb-hover: #8f9b99;
@@ -86,11 +84,8 @@
   --community-text-soft: #6f7a7a;
   --community-border: #252a2a;
   --community-border-soft: #1e2424;
-  --community-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+
   --community-nav-bg: var(--community-bg);
-  --community-shadow-dropdown:
-    0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 6px rgba(0, 0, 0, 0.3);
 
   --community-scrollbar-track: var(--community-bg);
   --community-scrollbar-thumb: #3a4242;
@@ -216,9 +211,27 @@ body.community-page {
   font-weight: 500;
 }
 
+.community-logo,
+.community-nav-links li:not(.community-nav-mobile-item) a,
+.community-footer a {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.22em;
+  transition:
+    color 0.32s var(--community-ease),
+    text-decoration-color 0.32s var(--community-ease);
+}
+
 .community-nav-links a:hover,
 .community-theme-button:hover {
   color: var(--community-text);
+}
+
+.community-logo:hover,
+.community-nav-links li:not(.community-nav-mobile-item) a:hover,
+.community-footer a:hover {
+  text-decoration-color: currentColor;
 }
 
 .community-join,
@@ -419,7 +432,7 @@ body.community-page {
 
 .community-section-head {
   max-width: var(--community-copy-width);
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .community-section-head h2 {
@@ -463,6 +476,20 @@ body.community-page {
   font-weight: 600;
 }
 
+.about-narrative a {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.about-narrative a:hover {
+  text-decoration-color: currentColor;
+}
+
 .about-aside,
 .join-steps {
   display: flex;
@@ -479,7 +506,6 @@ body.community-page {
   background: var(--community-bg-elevated);
   border: 1px solid var(--community-border-soft);
   border-radius: var(--community-radius);
-  box-shadow: var(--community-shadow);
 }
 
 .about-card,
