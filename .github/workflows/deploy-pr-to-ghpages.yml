@@ -22,8 +22,7 @@ jobs:
       # If you're using the default github pages url, use this instead:
       # DOMAIN: ${{ github.actor }}.github.io
       DOMAIN: sepheo.co
-      PREVIEW_PATH: _preview
-      PATH_PREFIX: ${{ env.PREVIEW_PATH }}/pr-${{github.event.number}}/
+      PATH_PREFIX: _preview/pr-${{ github.event.number }}/
     steps:
       - uses: actions/checkout@v2
 

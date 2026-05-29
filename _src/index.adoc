@@ -40,7 +40,7 @@ GitHub: https://github.com/sepheocoop[github.com/sepheocoop^]
 
 Social Media: https://social.coop/@sepheo
 
-Matrix: https://matrix.to/#/!vklouNjVmMVEgtcgcN:spacetu.be
+Matrix: https://matrix.to/#/!vklouNjVmMVEgtcgcN:spacetu.be?via=matrix.org&via=digitalcommons.coop&via=chat.clown.center[Matrix^]
 
 E-mail: mailto:contact@sepheo.co[]
 
