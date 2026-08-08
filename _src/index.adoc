@@ -32,7 +32,7 @@ costs, freelancers have *a direct relationship with their clients*.
 [#links]
 --
 
-Join our list of freelancers link:/register[here^].
+Join our list of freelancers link:/register[here^]. You can then update your profile link:/update[here^]
 
 OpenCollective: https://opencollective.com/sepheocoop#category-ABOUT[opencollective.com/sepheocoop^]
 
