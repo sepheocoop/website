@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" sizes="192x192" href="https://static.parastorage.com/client/pfavico.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/community/community.css" />
+    <script src="/community/community.js" defer></script>
+  </head>
+  <body class="community-page">
+    {{ content | raw }}
+  </body>
+</html>
